@@ -1,8 +1,6 @@
-# Corso-COSMOLOGIA-II
+# Corso-COSMOLOGIA-II - UNITs
 
-## Cosmology 2 Tutorials - University of Trieste
-
-This repository contains a crash course on python as part of Cosmology-II course.
+This repository contains a crash course on Python as part of the Cosmology-II course.
 
 ## Contents
 
