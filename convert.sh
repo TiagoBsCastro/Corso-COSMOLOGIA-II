@@ -1,0 +1,1 @@
+jupyter nbconvert Aula2.ipynb     --to slides     --TagRemovePreprocessor.enabled=True     --TagRemovePreprocessor.remove_input_tags='{"hide_input"}'     --TagRemovePreprocessor.remove_all_outputs_tags='{"hide_output"}'     --post serve
