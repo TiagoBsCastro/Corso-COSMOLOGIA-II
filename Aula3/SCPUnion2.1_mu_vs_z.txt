@@ -3,6 +3,11 @@
 # delta -0.0363405630486
 # M(h=0.7, statistical only) -19.3182761161
 # M(h=0.7, with systematics) -19.3081547178
+# Load SCP Union 2.1 dataset
+# union21 = np.loadtxt(
+#    'SCPUnion2.1_mu_vs_z.txt',
+#    dtype={'names': ('name', 'z', 'mu', 'mu_error', 'XXX'),
+#           'formats': ('S6', 'f', 'f', 'f', 'f')}
 1993ah	0.028488	35.3465833928	0.223905932998	0.128418942246
 1993ag	0.050043	36.6823679154	0.166828851413	0.128418942246
 1993o	0.052926	36.8176912545	0.1557559148	0.128418942246
