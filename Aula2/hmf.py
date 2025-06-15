@@ -127,27 +127,3 @@ plt.legend(fontsize=12)
 # Display the plot
 plt.tight_layout()
 plt.show()
-
-######################### PART 2 ###########################
-from colossus.cosmology import cosmology
-cosmo = cosmology.setCosmology('planck18')
-volume = 2_000.0**3
-for fname in ["halo_masses_vir_z0.0.txt", "halo_masses_vir_z1.0.txt", 
-              "halo_masses_500c_z0.0.txt", "halo_masses_500c_z1.0.txt"]:
-    masses = np.loadtxt(fname)
-    radii  = (masses / ((4/3) * np.pi * criticalDensity * Om0))**(1/3)
-    
-    mbins = np.geomspace(masses.min(), masses.max())
-    rbins = (mbins / ((4/3) * np.pi * criticalDensity * Om0))**(1/3)
-    sbins = np.array([sigma2(k, Pk, r) for r in rbins])
-    if 'z1.0' in fname:
-        sbins *= cosmo.growthFactor(1.0)**2
-    vbins = criticalOverdensity/sbins
-    
-    dndlogm, bins = np.histogram(masses, mbins)
-    dndlogm = dndlogm/(volume * np.log(mbins[1:]/mbins[:-1]))
-    
-    plt.plot(vbins[1:], mbins[1:]/criticalDensity/Om0*dndlogm*np.gradient(np.log(mbins[1:]), np.log(vbins[1:])), label=fname)
-plt.yscale('log')
-plt.legend()
-plt.show()

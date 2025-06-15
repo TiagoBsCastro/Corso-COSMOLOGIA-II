@@ -1,0 +1,41 @@
+[I 2024-11-27 15:02:31.818 ServerApp] ipyparallel | extension was successfully linked.
+[I 2024-11-27 15:02:31.818 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-11-27 15:02:31.821 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-11-27 15:02:31.823 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-11-27 15:02:31.825 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-11-27 15:02:31.836 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-11-27 15:02:31.837 ServerApp] Loading IPython parallel extension
+[I 2024-11-27 15:02:31.837 ServerApp] ipyparallel | extension was successfully loaded.
+[I 2024-11-27 15:02:31.838 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-11-27 15:02:31.838 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-11-27 15:02:31.840 LabApp] JupyterLab extension loaded from /home/tcastro/miniforge3/lib/python3.10/site-packages/jupyterlab
+[I 2024-11-27 15:02:31.840 LabApp] JupyterLab application directory is /home/tcastro/miniforge3/share/jupyter/lab
+[I 2024-11-27 15:02:31.840 LabApp] Extension Manager is 'pypi'.
+[I 2024-11-27 15:02:31.847 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-11-27 15:02:31.848 ServerApp] Serving notebooks from local directory: /home/tcastro/Corso-COSMOLOGIA-II/Aula3
+[I 2024-11-27 15:02:31.848 ServerApp] Jupyter Server 2.14.1 is running at:
+[I 2024-11-27 15:02:31.848 ServerApp] http://localhost:8888/lab?token=f5232bd4e3fac81ad390cb5800cf09f2bd9fe77630d35e6d
+[I 2024-11-27 15:02:31.848 ServerApp]     http://127.0.0.1:8888/lab?token=f5232bd4e3fac81ad390cb5800cf09f2bd9fe77630d35e6d
+[I 2024-11-27 15:02:31.848 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-11-27 15:02:31.870 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/tcastro/.local/share/jupyter/runtime/jpserver-8034-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/lab?token=f5232bd4e3fac81ad390cb5800cf09f2bd9fe77630d35e6d
+        http://127.0.0.1:8888/lab?token=f5232bd4e3fac81ad390cb5800cf09f2bd9fe77630d35e6d
+[I 2024-11-27 15:02:31.883 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2024-11-27 15:02:34.057 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2024-11-27 15:02:34.366 ServerApp] 404 GET /api/contents/Untitled.ipynb?content=0&hash=0&1732716154361 (b5288a1ec3be4b6fb05fb8ae8f251812@127.0.0.1) 2.70ms referer=http://localhost:8888/lab
+[W 2024-11-27 15:02:34.366 ServerApp] 404 GET /api/contents/Untitled.ipynb?content=0&hash=0&1732716154361 (127.0.0.1): No such file or directory: Untitled.ipynb
+[W 2024-11-27 15:02:34.371 ServerApp] 404 GET /api/contents/aula5.ipynb?content=0&hash=0&1732716154361 (b5288a1ec3be4b6fb05fb8ae8f251812@127.0.0.1) 1.91ms referer=http://localhost:8888/lab
+[W 2024-11-27 15:02:34.371 ServerApp] 404 GET /api/contents/aula5.ipynb?content=0&hash=0&1732716154361 (127.0.0.1): No such file or directory: aula5.ipynb
+[I 2024-11-27 15:02:38.509 ServerApp] Kernel started: a49b8d0d-2e5d-40ed-9375-b00319e28995
+[I 2024-11-27 15:02:38.829 ServerApp] Connecting to kernel a49b8d0d-2e5d-40ed-9375-b00319e28995.
+[I 2024-11-27 15:02:38.832 ServerApp] Connecting to kernel a49b8d0d-2e5d-40ed-9375-b00319e28995.
+[I 2024-11-27 15:02:38.837 ServerApp] Connecting to kernel a49b8d0d-2e5d-40ed-9375-b00319e28995.
+[I 2024-11-27 15:57:14.273 ServerApp] Kernel started: 5753edc7-bd19-43ca-9852-4ddad92ba1da
+[I 2024-11-27 15:57:14.595 ServerApp] Connecting to kernel 5753edc7-bd19-43ca-9852-4ddad92ba1da.
+[I 2024-11-27 15:58:02.981 ServerApp] Saving file at /SCPUnion2.1_mu_vs_z.txt
+[I 2024-11-27 17:05:16.241 ServerApp] Starting buffering for a49b8d0d-2e5d-40ed-9375-b00319e28995:e914652c-01b7-4d0f-bcf9-4e33249e6e90
+[I 2024-11-27 17:05:16.242 ServerApp] Starting buffering for 5753edc7-bd19-43ca-9852-4ddad92ba1da:4b3d1084-6a05-44b3-8b06-7bbca942b161
