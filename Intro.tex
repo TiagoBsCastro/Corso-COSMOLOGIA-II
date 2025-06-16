@@ -1,0 +1,213 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue,
+	citecolor=blue
+}
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},
+	commentstyle=\color{codegray},
+	keywordstyle=\color{blue},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{red},
+	basicstyle=\ttfamily\footnotesize,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\title{Brief Introduction to Python}
+\author{Tiago Castro}
+\date{\today}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Variables}
+	In Python, variables are dynamically typed. A variable can hold values of any type, and its type may change during execution.
+	
+	\begin{lstlisting}[language=Python]
+		x = 5          # Integer
+		name = "Alice"  # String
+		pi = 3.1415     # Float
+		is_valid = True  # Boolean
+	\end{lstlisting}
+	
+	\subsection*{Exercises}
+	\begin{enumerate}
+		\item Declare a variable `age` with your age and print its type using the `type` function.
+		\item Assign a string to a variable `greeting` and concatenate it with a name variable.
+		\item Change the type of `x` from integer to string and print both values.
+	\end{enumerate}
+	
+	\section{Lists, Dictionaries and Sets}
+	\subsection{Lists}
+	A list is an ordered and mutable collection of elements. Elements can be of mixed types.
+	
+	\begin{lstlisting}[language=Python]
+		fruits = ["apple", "banana", "cherry"]
+		print(fruits[1])          # Output: banana
+		fruits.append("date")    # Add an element
+		fruits[0] = "avocado"    # Modify an element
+	\end{lstlisting}
+	
+	\subsection*{Exercises}
+	\begin{enumerate}
+		\item Create a list of five numbers and compute its sum.
+		\item Reverse a list `colors = ["red","green","blue"]` and print the result.
+		\item Remove the last element from a list and print the remaining elements.
+	\end{enumerate}
+	
+	\subsection{Dictionaries}
+	A dictionary stores data as key-value pairs. Keys must be unique and immutable.
+	
+	\begin{lstlisting}[language=Python]
+		person = {"name": "Alice", "age": 25}
+		print(person["name"])     # Output: Alice
+		person["city"] = "Rome"  # Add new key-value pair
+	\end{lstlisting}
+	
+	\subsection*{Exercises}
+	\begin{enumerate}
+		\item Create a dictionary mapping three countries to their capitals.
+		\item Update the dictionary by changing one capital and print the changes.
+		\item Write a loop to print all keys and values of the dictionary.
+	\end{enumerate}
+	
+	\subsection{Sets}
+	A set is an unordered collection of unique elements. Useful for membership tests and eliminating duplicates.
+	
+	\begin{lstlisting}[language=Python]
+		unique_numbers = {1, 2, 3, 2}
+		print(unique_numbers)       # Output: {1, 2, 3}
+		unique_numbers.add(4)       # Add an element
+	\end{lstlisting}
+	
+	\subsection*{Exercises}
+	\begin{enumerate}
+		\item Create two sets and compute their union, intersection and difference.
+		\item Remove a specific element from a set.
+		\item Check if one set is a subset of another.
+	\end{enumerate}
+	
+	\section{List Comprehension}
+	List comprehensions provide a concise syntax to create lists based on existing iterables.
+	
+	\begin{lstlisting}[language=Python]
+		squares = [x**2 for x in range(5)]
+		print(squares)             # Output: [0, 1, 4, 9, 16]
+		evencubes = [x**3 for x in range(10) if x % 2 == 0]
+		print(even_cubes)          # Output: [0, 8, 64, 216, 512]
+	\end{lstlisting}
+	
+	\subsection*{Exercises}
+	\begin{enumerate}
+		\item Use a list comprehension to extract the first letter of each word in `words = ["hello","world"]`.
+		\item Create a list of tuples `(x, x*2)` for `x` in range 5.
+		\item Flatten a nested list `[[1,2],[3,4],[5]]` using a single comprehension.
+	\end{enumerate}
+	
+	\section{Functions}
+	Functions allow organization of code into reusable blocks. Define a function with `def`, include parameters and return values.
+	
+	\begin{lstlisting}[language=Python]
+		def greet(name):
+		"""Return a greeting for the given name."""
+		return f"Hello, {name}!"
+		
+		print(greet("Alice"))  # Output: Hello, Alice!
+		
+		# Function with default parameter
+		
+		def power(base, exponent=2):
+		"""Return base raised to the given exponent."""
+		return base ** exponent
+		
+		print(power(3))         # Output: 9
+		print(power(2, 3))      # Output: 8
+		
+		# Function with arbitrary arguments
+		
+		def summarize(*args):
+		"""Return sum of all arguments."""
+		return sum(args)
+		
+		print(summarize(1, 2, 3, 4))  # Output: 10
+	\end{lstlisting}
+	
+	\subsection*{Exercises}
+	\begin{enumerate}
+		\item Write a function `square(x)` that returns the square of x.
+		\item Create a function that takes a list and returns its maximum value.
+		\item Define a function that accepts keyword arguments and prints them.
+	\end{enumerate}
+	
+	\section{NumPy}
+	NumPy is a library for efficient numerical computing with support for large, multi-dimensional arrays and matrices.
+	
+	\begin{lstlisting}[language=Python]
+		import numpy as np
+		
+		array = np.array([1, 2, 3])
+		print(array * 2)            # Output: [2 4 6]
+		
+		matrix = np.array([[1, 2], [3, 4]])
+		print(matrix.T)             # Transpose
+		print(np.dot(matrix, matrix))  # Matrix multiplication
+	\end{lstlisting}
+	
+	\subsection*{Exercises}
+	\begin{enumerate}
+		\item Create a 3x3 identity matrix using NumPy.
+		\item Compute the mean and standard deviation of `array = np.arange(10)`.
+		\item Generate an array of 20 linearly spaced points between 0 and 1.
+	\end{enumerate}
+	
+	\section{Matplotlib}
+	Matplotlib is a plotting library for Python. It provides an object-oriented API and state-based interface.
+	
+	\begin{lstlisting}[language=Python]
+		import matplotlib.pyplot as plt
+		import numpy as np
+		
+		x = np.linspace(0, 2* np.pi, 100)
+		y = np.sin(x)
+		
+		plt.figure()
+		plt.plot(x, y)
+		plt.xlabel('x')
+		plt.ylabel('sin(x)')
+		plt.title('Sine Wave')
+		plt.grid(True)
+		plt.show()
+	\end{lstlisting}
+	
+	\subsection*{Exercises}
+	\begin{enumerate}
+		\item Plot a cosine function on the same axes as the sine function.
+		\item Create a scatter plot for random points using `np.random.rand(50,2)`.  
+		\item Save a plot to file `output.png` without displaying it interactively.
+	\end{enumerate}
+	
+\end{document}
